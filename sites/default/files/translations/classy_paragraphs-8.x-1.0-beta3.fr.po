@@ -1,0 +1,28 @@
+# French translation of Classy paragraphs (8.x-1.0-beta3)
+# Copyright (c) 2021 by the French translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Classy paragraphs (8.x-1.0-beta3)\n"
+"POT-Creation-Date: 2021-01-30 18:23+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+msgid "Delete"
+msgstr "Supprimer"
+msgid "Label"
+msgstr "Libellé"
+msgid "ID"
+msgstr "Identifiant (ID)"
+msgid "Are you sure you want to delete %name?"
+msgstr "Êtes-vous sûr(e) de vouloir supprimer %name ?"
+msgid "Classes"
+msgstr "Classes"
+msgid "Machine name"
+msgstr "Nom système"
+msgid "Paragraphs"
+msgstr "Paragraphs"

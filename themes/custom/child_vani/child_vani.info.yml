@@ -1,0 +1,30 @@
+name: Child_vani
+type: theme
+base theme: vani
+description: 'Theme enfant de vani'
+core_version_requirement: ^8 || ^9
+libraries:
+  - child_vani/global-styling
+regions:
+  site_branding: 'Site Branding'
+  primary_menu: 'Primary menu'
+  search_box: 'Full Page Search'
+  page_header: 'Page Header'
+  highlighted: Highlighted
+  presentation: Presentation
+  slider_photos: Slider Photos
+  content: Content
+  content_top: 'Content Top'
+  content_bottom: 'Content Bottom'
+  content_home: 'Homepage Content'
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  footer_top: 'Footer Top'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_bottom: 'Footer Bottom'
+  hidden_blocks: 'Hidden Blocks'
+  
+version: '1.x'

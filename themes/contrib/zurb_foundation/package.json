@@ -1,0 +1,22 @@
+{
+  "name": "zurb_foundation",
+  "version": "0.0.4",
+  "devDependencies": {
+    "foundation-sites": "~6.5.3",
+    "motion-ui": "~2.0.3",
+    "what-input": "^4.3.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-copy": "^0.0.2",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-util": "^3.0.7",
+    "rimraf": "*"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass",
+    "postinstall": "node_modules/.bin/rimraf node_modules/**/*.info"
+  },
+  "private": true
+}

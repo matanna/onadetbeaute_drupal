@@ -1,0 +1,35 @@
+<section class="slider">
+  <div class="container slider-container">
+    <div class="slider-text">
+      <ul class="js-rotating">
+        {% if slider_code != '' %}
+          {{ slider_code | striptags('<ol>,<ul>,<li>,<p>,<a>,<img>,<video>,<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<em>,<strong>,<br>,<i>,<button>,<mark>,<hr>') | raw }}
+        {% else %}
+        <li>
+      
+  				<h1>Prothesiste Ongulaire <em>Nail Art</em> </h1>
+  				<p>Accroche pour le nail art</p>
+  				<a class="button-link" href="/nail-art">En savoir plus</a>
+  			</li>
+  			<li>
+  				<h1>Extensions de <em>Cils</em> </h1>
+  				<p>Accroche pour les extensions de cils</p>
+  				<a class="button-link" href="/cils">En savoir plus</a>
+  			</li>
+  			<li>
+  				<h1>Vente de <em>Bijoux</em> et <em>Maquillage</em></h1>
+  				<p>Phrase d'accroche vente de bijoux / maquillage</p>
+  				<a class="button-link" href="/bijoux">En savoir plus</a>
+  			</li>
+        {% endif %}
+      </ul> <!--/.home-slider -->
+    </div><!-- /slider-text -->
+    <div class="slider-image">
+      {% if slider_image_path != '' %}
+        <img src="{{ slider_image_path }}" alt="slider image" />
+      {% else %}
+        <img src="{{ directory }}/images/slider.svg" alt="slider image" />
+      {% endif %}
+    </div><!-- /slider-image -->
+  </div> <!--/.container -->
+</section>

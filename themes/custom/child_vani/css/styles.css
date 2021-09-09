@@ -1,0 +1,112 @@
+/*Global
+---------------------------------------------------------*/
+.front-paragraph {
+    font-size: 1.3em;
+}
+.bold-word {
+    font-weight: bold;
+}
+
+
+/*block prestations page d'accueil
+---------------------------------------------------------*/
+.highlighted {
+    background: #ffffff;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.prestation {
+    position: relative;
+    width: 30% !important;
+    height: 500px;
+    padding: 1em;
+    background: #f2f4ff;
+    box-shadow: 0px 0px 15px #919296;
+}
+.prestation:first-of-type {
+    margin-right: 5%;
+}
+.prestation:last-of-type {
+    margin-left: 5%;
+}
+.prestation .views-field-title {
+    font-size: 2em;
+    margin-bottom: 3vh;
+}
+.prestation .field-content.block-title {
+    padding-bottom: 1vh;
+}
+.prestation .views-field-field-lien-vers-contenu {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    
+}
+.prestation div.node-readmore a {
+    position: relative;
+    border: 2px solid var(--theme-color);
+    border-radius: 30px;
+    padding: 0.4em 0.8em;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.prestation div.node-readmore a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    height: 2px;
+    width: 0;
+    background: var(--theme-color);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+    
+.prestation div.node-readmore a:hover {
+    color: var(--theme-color);
+    padding: 0.4em 3em 0.4em 0.8em;
+}
+.prestation div.node-readmore a:hover::after {
+    width: 2em;
+}
+
+/*Bloc présentation de l'activité
+--------------------------------------------------------------*/
+.presentation-activity {
+    background: #f2f4ff;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin-bottom: 10vh;
+}
+.presentation-activity .container {
+    display: flex;
+}
+.presentation-text {
+    width: 50%;
+}
+.presentation-slider-photos {
+    width: 50%;
+}
+.group-left {
+    padding-right: 4em;
+}
+.presentation-activity section .groupe-left p{
+    font-size: 1.5em;
+}
+.group-right {
+    text-align: right;
+}
+.activites{
+    display: flex;
+    justify-content: space-between;
+}
+.activites span {
+    font-size: 2em;
+    font-weight: bold;
+}
+/*.presentation-activity a {
+    color: #ffffff;
+}
+.presentation-activity a:hover {
+  color: var(--theme-color);
+}

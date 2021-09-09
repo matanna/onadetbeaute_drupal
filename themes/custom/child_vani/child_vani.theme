@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Add a suggestions for contact link and adapt css
+ *
+ * @param array $suggestions
+ * @param array $variables
+ * @param string $hook
+ * @return array
+ */
+function child_vani_theme_suggestions_field_alter(&$suggestions, $variables, $hook) {
+
+    if ($variables['element']['#title'] === 'Lien vers contact') {
+        $suggestions[] = 'field__contact';
+    }
+    return $suggestions;  
+}
+
+/**
+ * Add a suggestions for adapt slider on fronty page presentation section
+ *
+ * @param array $suggestions
+ * @param array $variables
+ * @param string $hook
+ * @return array
+ */
+function child_vani_theme_suggestions_node_alter(&$suggestions, $variables, $hook) {
+
+    
+    if ($variables['elements']['#view_mode'] === 'slick_caroussel' 
+        && $variables['elements']['field_slider']['#title'] === 'Photo') {
+            $suggestions[] = 'node__presentation--slider';
+    }
+    return $suggestions;
+}

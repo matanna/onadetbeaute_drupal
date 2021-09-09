@@ -1,0 +1,24 @@
+features:
+   comment_user_picture: true
+   favicon: true
+   node_user_picture: true
+settings:
+  zurb_foundation_status_in_reveal: false
+  zurb_foundation_use_respondjs: false
+  zurb_foundation_disable_base_css: false
+  zurb_foundation_disable_base_js: false
+  zurb_foundation_meta_header_grid: true
+  zurb_foundation_top_bar_enable: false
+  zurb_foundation_top_bar_grid: false
+  zurb_foundation_top_bar_sticky: false
+  zurb_foundation_top_bar_menu_text: 'Menu'
+  zurb_foundation_top_bar_custom_back_text: true
+  zurb_foundation_top_bar_back_text: 'Back'
+  zurb_foundation_top_bar_is_hover: true
+  zurb_foundation_top_bar_search: false
+  zurb_foundation_top_bar_languageswitcher: false
+  zurb_foundation_page_account_info: true
+  zurb_foundation_block_copyright_show: true
+  zurb_foundation_block_copyright_custom_text: false
+  zurb_foundation_block_copyright_text: ''
+langcode: en
