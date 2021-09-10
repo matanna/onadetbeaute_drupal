@@ -6,7 +6,40 @@
 .bold-word {
     font-weight: bold;
 }
+.left {
+    text-align: left;
+}
 
+/*Style link button*/
+div.node-readmore a {
+  position: relative;
+  border: 2px solid var(--theme-color);
+  border-radius: 30px;
+  padding: 0.4em 0.8em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+div.node-readmore a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  height: 2px;
+  width: 0;
+  background: var(--theme-color);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+div.node-readmore a:hover {
+  color: var(--theme-color);
+  padding: 0.4em 3em 0.4em 0.8em;
+}
+
+div.node-readmore a:hover::after {
+  width: 2em;
+}
 
 /*block prestations page d'accueil
 ---------------------------------------------------------*/
@@ -42,41 +75,14 @@
     right: 10px;
     
 }
-.prestation div.node-readmore a {
-    position: relative;
-    border: 2px solid var(--theme-color);
-    border-radius: 30px;
-    padding: 0.4em 0.8em;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.prestation div.node-readmore a::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    height: 2px;
-    width: 0;
-    background: var(--theme-color);
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-    
-.prestation div.node-readmore a:hover {
-    color: var(--theme-color);
-    padding: 0.4em 3em 0.4em 0.8em;
-}
-.prestation div.node-readmore a:hover::after {
-    width: 2em;
-}
 
 /*Bloc présentation de l'activité
 --------------------------------------------------------------*/
 .presentation-activity {
     background: #f2f4ff;
     padding-top: 4vh;
-    padding-bottom: 4vh;
-    margin-bottom: 10vh;
+    padding-bottom: 3vh;
+    margin-bottom: 2vh;
 }
 .presentation-activity .container {
     display: flex;
@@ -104,9 +110,79 @@
     font-size: 2em;
     font-weight: bold;
 }
-/*.presentation-activity a {
-    color: #ffffff;
+#presentation-slider img {
+    height: 330px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    box-shadow: 0px 0px 15px #919296;
+    margin: auto;
 }
-.presentation-activity a:hover {
-  color: var(--theme-color);
+#presentation-slider .field--name-field-slider {
+    margin: 1em;
+}
+.presentation-link-photos {
+    text-align: right;
+    margin-bottom: 10vh;
+}
+
+/*Bloc Qui suis-je
+--------------------------------------------------------------*/
+.qui-suis-je {
+    background: #f2f4ff;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+    margin-bottom: 15vh;
+}
+.qui-suis-je .field--name-field-titre-du-bloc {
+    margin-bottom: 5vh !important;
+}
+.qui-suis-je-title span {
+    padding-top: 2em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.qui-suis-je .slick .field-item {
+    height: 480px;
+    margin: 1em 1em 2em 1em;
+}
+.qui-suis-je .slick img {
+    margin: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    box-shadow: 0px 0px 15px #919296;
+}
+
+/*Bloc Contact form
+-------------------------------------------------------------*/
+#footer-top {
+    background: var(--footer-bg);
+    color: var(--content-bg);
+}
+#footer-top label {
+    color: var(--content-bg);
+}
+#footer-top .block-title{
+    color: var(--theme-color);
+}
+#footer-top .block-title {
+    margin-left: 10%;
+}
+#footer-top input[type="text"] {
+    background: var(--content-bg);
+    border-radius: 20px;
+}
+#footer-top input[type="email"] {
+  background: var(--content-bg);
+  border-radius: 20px;
+}
+#footer-top .node-taxonomy-container .taxonomy-terms {
+    text-align: center;
+    
+}
+#footer-top .node-taxonomy-container .taxonomy-terms .taxonomy-term {
+    text-align: left;
+    width: 80%
+}
+#footer-top .contact-message-formulaire-de-contact-footer-form label {
+    display: none;
 }

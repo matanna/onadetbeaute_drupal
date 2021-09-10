@@ -76,37 +76,7 @@ set node_classes = [
 ]
 %}
 <article{{ attributes.addClass(node_classes) }}>
-{{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes.addClass('node-title') }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-{{ title_suffix }}
 
-{% if display_submitted %}
-  <header class="node-header clear">
-    {% if node_author_pic %}
-      <div class="author-picture">{{ author_picture }}</div>
-    {% endif %}
-    <div{{ author_attributes.addClass('node-submitted-details') }}>
-      {% set createdDate = node.getCreatedTime|date('j F Y') %}
-      {% trans %}<span><i class="icon-user user-icon"></i> {{ author_name }}</span><span><i class="icon-calendar"></i> {{ createdDate }}</span>{% endtrans %}
-      {% if node_tags %}
-      {% if content.field_tags %}
-        <span><i class="icon-hashtag"></i>
-        {% for item in content.field_tags %}
-          {% if item['#title'] %}
-            <a href="{{ item['#url']}}">{{ item['#title']  }}</a>{{ ',' }}
-          {% endif %}
-        {% endfor %}
-      </span>
-      {% endif %}
-      {% endif %}
-      {{ metadata }}
-    </div>
-  </header>
-{% endif %}
   <div{{ content_attributes.addClass('node-content clear') }}>
     {{ content }}
   </div>

@@ -16,6 +16,7 @@ regions:
   content: Content
   content_top: 'Content Top'
   content_bottom: 'Content Bottom'
+  qui_suis_je: Qui suis-je
   content_home: 'Homepage Content'
   sidebar_first: 'Sidebar Left'
   sidebar_second: 'Sidebar Right'

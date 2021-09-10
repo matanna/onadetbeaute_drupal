@@ -20,6 +20,9 @@
     </div>
   </div>
 </section>
+<div class="container">
+  <div class="presentation-link-photos node-readmore"><a href="/photos">Toutes les photos</a></div>
+</div>
 <div id="main-wrapper" class="main-wrapper">
   {% include '@vani/template-parts/content_home.html.twig' %}
   <div class="container clear">
@@ -40,6 +43,11 @@
     {% endif %}
   </div> {# /.container #}
 </div>{# /main-wrapper #}
+<section class="qui-suis-je">
+  <div class="container">
+    {{ page.qui_suis_je}}
+  </div>
+</section>
 {% include '@vani/template-parts/footer.html.twig' %}
 {% if slider_show %}
   {{ attach_library('vani/slider') }}

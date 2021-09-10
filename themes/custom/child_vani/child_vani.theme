@@ -26,10 +26,17 @@ function child_vani_theme_suggestions_field_alter(&$suggestions, $variables, $ho
  */
 function child_vani_theme_suggestions_node_alter(&$suggestions, $variables, $hook) {
 
-    
-    if ($variables['elements']['#view_mode'] === 'slick_caroussel' 
+    if ($variables['elements']['#view_mode'] === 'slick_carousel' 
         && $variables['elements']['field_slider']['#title'] === 'Photo') {
-            $suggestions[] = 'node__presentation--slider';
+            $suggestions[] = 'node__presentation__slider';
+            
     }
     return $suggestions;
+}
+
+function child_vani_preprocess_input($variables) {
+    
+    if ($variables['element']['#title']) {
+        
+    }
 }
