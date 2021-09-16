@@ -816,6 +816,8 @@ $databases['default']['default'] = array (
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_2ZeI2b6hlI2arc7wYXDaWbEigzm7ajxHrNAh4Ey2AxCPeeIX9mlz0jNPag6ndR-T4NN8nhthVQ/sync';
 
+/*
 $settings['trusted_host_patterns'] = array(
   '^www\.onadetbeaute\.com$',
 );
+*/

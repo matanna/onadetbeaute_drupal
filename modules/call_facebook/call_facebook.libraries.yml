@@ -1,0 +1,7 @@
+facebook-slider:
+  version: 1.x
+  js:
+    js/facebook-slider.js: {}
+  dependencies:
+    - core/jquery
+    - libraries/slick

@@ -1,0 +1,5 @@
+name: Call Facebook
+description: Permet d'obtenir les publications d'une page Facebook et de les afficher dans un template
+
+type: module
+core_version_requirement: ^8 || ^9

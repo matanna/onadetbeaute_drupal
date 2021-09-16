@@ -1,5 +1,8 @@
 /*Global
 ---------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
 .front-paragraph {
     font-size: 1.3em;
 }
@@ -55,6 +58,8 @@ div.node-readmore a:hover::after {
     padding: 1em;
     background: #f2f4ff;
     box-shadow: 0px 0px 15px #919296;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .prestation:first-of-type {
     margin-right: 5%;
@@ -80,6 +85,8 @@ div.node-readmore a:hover::after {
 --------------------------------------------------------------*/
 .presentation-activity {
     background: #f2f4ff;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
     padding-top: 4vh;
     padding-bottom: 3vh;
     margin-bottom: 2vh;
@@ -93,13 +100,13 @@ div.node-readmore a:hover::after {
 .presentation-slider-photos {
     width: 50%;
 }
-.group-left {
+.presentation-activity .group-left {
     padding-right: 4em;
 }
 .presentation-activity section .groupe-left p{
     font-size: 1.5em;
 }
-.group-right {
+.presentation-activity .group-right {
     text-align: right;
 }
 .activites{
@@ -123,6 +130,49 @@ div.node-readmore a:hover::after {
 .presentation-link-photos {
     text-align: right;
     margin-bottom: 10vh;
+}
+
+/*Bloc Publications facebook
+--------------------------------------------------------------*/
+#social_posts .block-section {
+    display: flex;
+    justify-content: space-between;
+}
+#social_posts .social_posts_title {
+    margin-bottom: 5vh;
+    font-size: 2em;
+}
+#social_posts a {
+    text-align: right;
+}
+#social_posts .bloc-iframes {
+    margin-bottom: 10vh;
+}
+#social_posts .slick-slide {
+    text-align: center;
+    margin: 2em;
+    padding: 1em;
+    background-color: #f2f4ff;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 470px;
+    box-shadow: 0px 0px 15px #919296;
+}
+#social_posts iframe {
+    width: 100%;
+    height: 100%;
+}
+#social_posts .slick-arrow {
+    background: inherit;
+}
+#social_posts .slick-next {
+    position: absolute;
+    z-index: 100;
+    right: 10px;
+}
+#social_posts .slick-prev {
+    position: absolute;
+    z-index: 100;
 }
 
 /*Bloc Qui suis-je
@@ -167,6 +217,9 @@ div.node-readmore a:hover::after {
 #footer-top .block-title {
     margin-left: 10%;
 }
+#footer-top input::placeholder, #footer-top textarea::placeholder {
+    color: #919296;
+}
 #footer-top input[type="text"] {
     background: var(--content-bg);
     border-radius: 20px;
@@ -185,4 +238,38 @@ div.node-readmore a:hover::after {
 }
 #footer-top .contact-message-formulaire-de-contact-footer-form label {
     display: none;
+}
+
+/*Bloc footer
+-----------------------------------------------------------------------*/
+#footer-blocks {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    border-top: 1px solid var(--footer-border-color);
+}
+#footer-blocks .block-region {
+    text-align: ;
+}
+#footer-blocks .block-region h2 {
+    font-size: 1.2em;
+}
+#footer-blocks .block-title::before,
+#footer-blocks .block-title::after {
+    height: 0;
+}
+#footer-blocks .block-region .field {
+    display: flex;
+    justify-content: flex-start;
+}
+#footer-blocks .block-region .field svg{
+  margin-right: 20px;
+}
+#footer-blocks .region-footer-first {
+    padding: 0 30% 0 30%;
+}
+#footer-blocks svg path{
+  color: var(--theme-color);
+}
+#footer-blocks .field:not(:last-child) {
+  margin-bottom: 10px !important;
 }

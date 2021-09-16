@@ -1,0 +1,22 @@
+
+<section id="social_posts">
+    <div class="container">
+       <div class="block-section"> 
+            <span class="field-content block-title social_posts_title bold-word">Mes dernières publications</span>
+            
+            {% if logged_in %}
+            <a href='https://www.facebook.com/v6.0/dialog/oauth?client_id=816116955749559&redirect_uri=https%3A%2F%2Flocalhost%2Fonadetbeaute%2F&state=987654321'>Connecter le site à facebook</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="bloc-iframes">
+    {% for post in posts.data|slice(0, 10) %}
+        {% set id = (post.id|split('_'))[1] %}
+        <div class="posts-iframe">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FONadetBeaute%2Fposts%2F{{ id }}&show_text=true&width=500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+    {% endfor %}
+    </div>
+
+</section>

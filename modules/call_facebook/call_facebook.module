@@ -1,0 +1,53 @@
+<?php
+
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\call_facebook\Controller\FacebookController;
+
+/**
+ * This function retrieves posts on facebook for insert them in front page
+ *
+ * @param array $variable
+ * @return void
+ */
+function call_facebook_preprocess_page__front(&$variable)
+{
+    $facebookController = new FacebookController();
+    
+    //The code send by facebook api in the request uri (GET parameter)
+    if (isset($_REQUEST['code'])) {
+        $facebookController->getAccessToken($_REQUEST['code']);
+    }
+    
+    //Get posts from facebook
+    try {
+      $posts = $facebookController->getPosts();
+    
+      $variable['posts'] = $posts;
+
+    } catch (Exception $e) {
+        \Drupal::messenger()->addWarning('Impossible d\'afficher les publications');
+    }
+
+    $variable['#attached']['library'][] = 'call_facebook/facebook-slider';
+}
+
+/**
+ * Implements hook_schema().
+ * 
+ * This function create a table in the database when the module is activate. The table created will be used to store access token for facebook api connexion
+ */
+function call_facebook_schema() {
+  $schema['facebook_token'] = array(
+    'description' => 'Token for api facebook access',
+    'fields' => array(
+      'id'                           => array('type' => 'int', 'not null' => TRUE),
+      'user_access_token'            => array('type' => 'varchar_ascii', 'length' => 256, 'not null' => FALSE),
+      'user_access_token_long'       => array('type' => 'varchar_ascii', 'length' => 256, 'not null' => FALSE),
+      'page_access_token'            => array('type' => 'varchar_ascii', 'length' => 256, 'not null' => FALSE),
+      'page_access_token_long'       => array('type' => 'varchar_ascii', 'length' => 256, 'not null' => FALSE),
+    ),
+    'primary key' => array('id')
+  );
+  return $schema;
+}
+
