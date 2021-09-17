@@ -22,7 +22,8 @@
         "drupal/core-vendor-hardening": "^9.2",
         "drupal/devel": "^4.1",
         "drush/drush": "^10.6",
-        "kint-php/kint": "^3.3"
+        "kint-php/kint": "^3.3",
+        "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
         "drupal/drupal": "*"

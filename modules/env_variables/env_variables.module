@@ -1,0 +1,13 @@
+<?php
+
+/**
+   * hook_theme()
+   */
+function env_variables_theme() {
+  return [
+    'view_env_variables' => [
+      'variables' => ['result' => NULL],
+	    'template' => 'view-env-variables',
+    ],
+  ];
+}

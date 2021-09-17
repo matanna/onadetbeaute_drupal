@@ -1,0 +1,17 @@
+<style>
+table, th, td {
+   border: 1px solid #ccc;
+}
+</style>
+<table style="width:70%;">
+  <tr>
+    <th>Variable Name</th>
+    <th>Value</th>
+  </tr>
+{% for key,value in result %}
+  <tr>
+    <th>{{ key }}</th>
+    <td>{{ value }}</td>     
+  </tr>
+{% endfor %}  
+</table>

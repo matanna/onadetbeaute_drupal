@@ -88,7 +88,28 @@
  * ];
  * @endcode
  */
-$databases = [];
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
+
+$settings['config_sync_directory'] = 'sites/default/files/config_2ZeI2b6hlI2arc7wYXDaWbEigzm7ajxHrNAh4Ey2AxCPeeIX9mlz0jNPag6ndR-T4NN8nhthVQ/sync';
+
+/*
+$settings['trusted_host_patterns'] = array(
+  '^www\.onadetbeaute\.com$',
+);
+*/
+
+//Good way : use .env ignore by GIT
+$databases['default']['default'] = [
+    'database' => $_ENV['MYSQL_DATABASE'], 
+    'driver' => 'mysql', 
+    'host' => $_ENV['MYSQL_HOSTNAME'],
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'password' => $_ENV['MYSQL_PASSWORD'], 
+    'port' => $_ENV['MYSQL_PORT'],
+    'prefix' => '',
+    'username' => $_ENV['MYSQL_USER'], 
+  ];
 
 /**
  * Customizing database settings.
@@ -799,25 +820,10 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
 
-$databases['default']['default'] = array (
-  'database' => 'onadetbeaute',
-  'username' => 'root',
-  'password' => 'myalilou85260',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_2ZeI2b6hlI2arc7wYXDaWbEigzm7ajxHrNAh4Ey2AxCPeeIX9mlz0jNPag6ndR-T4NN8nhthVQ/sync';
 
-/*
-$settings['trusted_host_patterns'] = array(
-  '^www\.onadetbeaute\.com$',
-);
-*/

@@ -1,0 +1,4 @@
+services:
+  env_variables:
+    class: '\Drupal\env_variables\Services\DotEnvServices'
+    arguments: ['@request_stack' , '@logger.factory']

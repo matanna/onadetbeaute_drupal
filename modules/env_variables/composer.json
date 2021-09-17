@@ -1,0 +1,9 @@
+{
+  "name": "drupal/env_variables",
+  "description": "Plugin to view the user defined environment variables",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "require": {
+    "vlucas/phpdotenv": "^5.0"
+  }
+}

@@ -39,8 +39,8 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/core/includes/bootstrap.inc',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
     );
 
@@ -102,6 +102,7 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
+            'PhpOption\\' => 10,
         ),
         'M' => 
         array (
@@ -131,6 +132,7 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
             'GuzzleHttp\\' => 11,
             'Grasmash\\YamlExpander\\' => 22,
             'Grasmash\\Expander\\' => 18,
+            'GrahamCampbell\\ResultType\\' => 26,
         ),
         'E' => 
         array (
@@ -148,6 +150,7 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
             'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 38,
             'Drupal\\Component\\' => 17,
             'DrupalCodeGenerator\\' => 20,
+            'Dotenv\\' => 7,
             'Doctrine\\Persistence\\' => 21,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Common\\Lexer\\' => 22,
@@ -349,6 +352,10 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'PhpOption\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
@@ -405,6 +412,10 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
         array (
             0 => __DIR__ . '/..' . '/grasmash/expander/src',
         ),
+        'GrahamCampbell\\ResultType\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
         'Enlightn\\SecurityChecker\\' => 
         array (
             0 => __DIR__ . '/..' . '/enlightn/security-checker/src',
@@ -448,6 +459,10 @@ class ComposerStaticInit4eedd22b05121b4ddc49b49c1fb16ba5
         'DrupalCodeGenerator\\' => 
         array (
             0 => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Doctrine\\Persistence\\' => 
         array (

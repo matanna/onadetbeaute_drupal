@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '4ff594eacddedd237250f27d224193fae6dd61bb',
+    'reference' => '63ae1ab58756fd74d9257d5ad133be1f05a5e0f0',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -802,7 +802,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '4ff594eacddedd237250f27d224193fae6dd61bb',
+      'reference' => '63ae1ab58756fd74d9257d5ad133be1f05a5e0f0',
     ),
     'drupal/link' => 
     array (
@@ -1132,6 +1132,15 @@ private static $installed = array (
       ),
       'reference' => 'dc5bce653fa4d9c792e9dcffa728c0642847c1e1',
     ),
+    'graham-campbell/result-type' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '84afea85c6841deeea872f36249a206e878a5de0',
+    ),
     'grasmash/expander' => 
     array (
       'pretty_version' => '1.0.0',
@@ -1301,6 +1310,15 @@ private static $installed = array (
       ),
       'reference' => 'b14fbe2ddb0b9f94f5b24cf08783d599f776fff0',
     ),
+    'phpoption/phpoption' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5455cb38aed4523f99977c4a12ef19da4bfe2a28',
+    ),
     'psr/cache' => 
     array (
       'pretty_version' => '1.0.1',
@@ -1323,8 +1341,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '^1.0',
+        0 => '^1.0',
+        1 => '1.0',
       ),
     ),
     'psr/event-dispatcher-implementation' => 
@@ -1742,6 +1760,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '60131cb573a1e478cfecd34e4ea38e3b31505f75',
+    ),
+    'vlucas/phpdotenv' => 
+    array (
+      'pretty_version' => 'v5.3.0',
+      'version' => '5.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b3eac5c7ac896e52deab4a99068e3f4ab12d9e56',
     ),
     'webflo/drupal-finder' => 
     array (

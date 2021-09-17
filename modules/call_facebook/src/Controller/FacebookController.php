@@ -138,7 +138,7 @@ class FacebookController extends ControllerBase
                 ]
             ]
         );
-
+        
         $posts = json_decode($response->getBody(), true);
 
         $postsSorted = $this->filterPosts($posts);
