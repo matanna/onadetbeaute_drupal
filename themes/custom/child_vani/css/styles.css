@@ -44,6 +44,10 @@ div.node-readmore a:hover::after {
   width: 2em;
 }
 
+/*-----------------------------------------------------------------
+Front page styles
+-------------------------------------------------------------------*/
+
 /*block prestations page d'accueil
 ---------------------------------------------------------*/
 .highlighted {
@@ -134,6 +138,9 @@ div.node-readmore a:hover::after {
 
 /*Bloc Publications facebook
 --------------------------------------------------------------*/
+#social_posts {
+    margin-bottom: 10vh;
+}
 #social_posts .block-section {
     display: flex;
     justify-content: space-between;
@@ -146,7 +153,7 @@ div.node-readmore a:hover::after {
     text-align: right;
 }
 #social_posts .bloc-iframes {
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
 }
 #social_posts .slick-slide {
     text-align: center;
@@ -155,8 +162,11 @@ div.node-readmore a:hover::after {
     background-color: #f2f4ff;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
-    height: 470px;
+    height: 490px;
     box-shadow: 0px 0px 15px #919296;
+}
+#social_posts ul.social-icons {
+    text-align: center;
 }
 #social_posts iframe {
     width: 100%;
@@ -173,6 +183,16 @@ div.node-readmore a:hover::after {
 #social_posts .slick-prev {
     position: absolute;
     z-index: 100;
+}
+#social_posts .social-icons li a {
+  text-align: center;
+  padding: 14px 17px;
+  border: 1px solid var(--theme-color);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10vh;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 /*Bloc Qui suis-je
@@ -200,6 +220,20 @@ div.node-readmore a:hover::after {
     object-fit: cover;
     object-position: 50% 50%;
     box-shadow: 0px 0px 15px #919296;
+}
+
+/*-----------------------------------------------------------------
+Global pages styles
+-------------------------------------------------------------------*/
+
+.custom-container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media (min-width: 768px) {
+    .two-sidebar .main-container {
+        grid-template-columns: 20% 60% 20%;
+    }
 }
 
 /*Bloc Contact form
@@ -262,14 +296,101 @@ div.node-readmore a:hover::after {
     justify-content: flex-start;
 }
 #footer-blocks .block-region .field svg{
-  margin-right: 20px;
+    margin-right: 20px;
 }
 #footer-blocks .region-footer-first {
     padding: 0 30% 0 30%;
 }
 #footer-blocks svg path{
-  color: var(--theme-color);
+    color: var(--theme-color);
 }
 #footer-blocks .field:not(:last-child) {
-  margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/*Bloc paragraph prestations
+---------------------------------------------------------------------------*/
+.paragraph--type-photo-description-prix {
+    border-bottom: 1px solid #f2f4ff;
+    display: flex; 
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.paragraph--type-photo-description-prix img {
+    margin: 1em;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 50%;
+    box-shadow: 0px 0px 10px #919296;
+}
+.paragraph--type-photo-description-prix .group-left {
+    min-height: 10vh;
+}
+.paragraph--type-photo-description-prix .group-middle,
+.paragraph--type-photo-description-prix .group-right {
+    position: relative;
+}
+.paragraph--type-photo-description-prix .group-middle .field {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.paragraph--type-photo-description-prix .group-middle p {
+    margin: 0;
+    border-bottom: 1px solid var(--theme-color);
+    font-weight: bold;
+}
+.paragraph--type-photo-description-prix .group-right .field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.field--name-field-tarif {
+    padding: 1em;
+    color: white;
+    background: var(--theme-color);
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+/*Bloc Contact sidebar-right
+---------------------------------------------------------------------------*/
+#block-infoscontactfooter-2 .field {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Bloc Page Toutes les photos
+---------------------------------------------------------------------------*/
+.item-photos .views-col{
+    height: 400px;
+    padding: 0 1em 1em 1em;
+    overflow: hidden;
+}
+.item-photos .views-col .node-header {
+    display: none;
+}
+.item-photos .views-col .node-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.item-photos .views-col article .node-content img {
+    box-shadow: 0px 0px 10px #919296;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/*Bloc Menu photos
+---------------------------------------------------------------------------*/
+#block-menuphotos ul {
+    margin-bottom: 2em;
+}
+#block-menuphotos ul li {
+    display: inline;
+    margin: 0 1em 4em 0;
 }

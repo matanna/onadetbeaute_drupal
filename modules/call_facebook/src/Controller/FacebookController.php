@@ -160,15 +160,17 @@ class FacebookController extends ControllerBase
 
             $response = $this->client->request(
                 'GET',
-                'https://graph.facebook.com/v12.0/' . $post['id'] . '?fields=picture,story_tags',
+                'https://graph.facebook.com/v12.0/' . $post['id'] . '?fields=picture,message',
                 [
                     'headers' => [
                         'Authorization' => 'Bearer ' . $this->token,
                     ]
                 ]
             );
+            
+            //Only posts contains '#onadetbeaute'in their message and has a picture are displayed on the website
             if (isset(json_decode($response->getBody(), true)['picture']) 
-                //&& in_array('#onadetbeaute.com', json_decode($response->getBody(), true)['story_tags'])
+                //&& str_contains(json_decode($response->getBody(), true)['message'], '#onadetbeaute.com')
             ) {
                 $postsSorted['data'][] = $post; 
             }

@@ -52,7 +52,7 @@
 {% include '@vani/template-parts/header.html.twig' %}
 {% include '@vani/template-parts/highlighted.html.twig' %}
 <div id="main-wrapper" class="main-wrapper">
-  <div class="container clear">
+  <div class="clear custom-container">
   <div class="main-container">
     <main id="main" class="page-content">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -68,3 +68,5 @@
   </div> {# /.container #}
 </div>{# /main-wrapper #}
 {% include directory ~ '/templates/footer.html.twig' %}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v12.0" nonce="e8t8DKmG"></script>

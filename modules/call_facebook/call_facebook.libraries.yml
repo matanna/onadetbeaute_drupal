@@ -4,4 +4,3 @@ facebook-slider:
     js/facebook-slider.js: {}
   dependencies:
     - core/jquery
-    - libraries/slick

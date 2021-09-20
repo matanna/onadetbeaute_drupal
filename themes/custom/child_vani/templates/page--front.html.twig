@@ -19,11 +19,14 @@
     </div>
     <div class="presentation-slider-photos">
       {{ page.slider_photos }}
+      {% if logged_in %}
+      <div class="text-center"><a href="{{ path('view.photos_prevus_pour_le_slider.page_1') }}">Gérer les photos du slider</a></div>
+      {% endif %}
     </div>
   </div>
 </section>
 <div class="container">
-  <div class="presentation-link-photos node-readmore"><a href="/photos">Toutes les photos</a></div>
+  <div class="presentation-link-photos node-readmore"><a href="{{ path('view.toutes_les_photos.page_1') }}">Toutes les photos</a></div>
 </div>
 <div id="main-wrapper" class="main-wrapper">
   <div class="clear">
@@ -34,6 +37,7 @@
 
 
 <section class="qui-suis-je">
+
   <div class="container">
     {{ page.qui_suis_je}}
   </div>
