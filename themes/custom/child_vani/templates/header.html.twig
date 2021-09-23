@@ -1,4 +1,4 @@
-<header class="header clear">
+<header class="header header-front clear">
   <div class="header-cicle header-cicle1"></div>
   <div class="header-cicle header-cicle3"></div>
   <div class="header-cicle header-cicle4"></div>
@@ -12,29 +12,30 @@
   <div class="header-cicle header-cicle9"></div>
   {% endif %}
   <div class="container">
-  <div class="header-main">
-    {% if page.site_branding %}
-      <div class="site-brand">
-        {{ page.site_branding }}
-      </div> <!--/.site-branding -->
-    {% endif %}
-    {% if page.primary_menu or page.search_box %}
-      <div class="header-main-right">
-        {% if page.primary_menu %}
-          <div class="mobile-menu"><i class="icon-menu"></i></div> {# mobile-menu #}
-          <div class="primary-menu-wrapper">
-            <div class="menu-wrap">
-              <div class="close-mobile-menu">x</div>
-              {{ page.primary_menu }}
-            </div> <!-- /.menu-wrap -->
-          </div> <!-- /.primary-menu-wrapper -->
-        {% endif %}
-        {% if page.search_box %}
-          {% include '@vani/template-parts/search.html.twig' %}
-        {% endif %}
-      </div> <!-- /.header-right -->
-    {% endif %}
-  </div><!-- /header-main -->
+    <div class="header-main">
+      {% if page.site_branding %}
+        <div class="site-brand">
+          {{ page.site_branding }}
+        </div> <!--/.site-branding -->
+      {% endif %}
+      {% if page.primary_menu or page.search_box %}
+        <div class="header-main-right">
+          {% if page.primary_menu %}
+            <div class="mobile-menu"><i class="icon-menu"></i></div> {# mobile-menu #}
+            <div class="primary-menu-wrapper">
+              <div class="menu-wrap">
+                <div class="close-mobile-menu">x</div>
+                {{ page.primary_menu }}
+              </div> <!-- /.menu-wrap -->
+            </div> <!-- /.primary-menu-wrapper -->
+          {% endif %}
+          {% if page.search_box %}
+            {% include '@vani/template-parts/search.html.twig' %}
+          {% endif %}
+        </div> <!-- /.header-right -->
+      {% endif %}
+    </div><!-- /header-main -->
+
   </div><!-- /container -->
   {% if is_front and slider_show %}
     {% include directory ~ '/templates/slider.html.twig' %}
@@ -42,3 +43,4 @@
     {% include '@vani/template-parts/page_header.html.twig' %}
   {% endif %}
 </header>
+

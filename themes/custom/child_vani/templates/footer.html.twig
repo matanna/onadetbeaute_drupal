@@ -51,9 +51,15 @@
     <div class="footer-bottom-last">
       {% if copyright_text %}
           <div class="copyright">
-            &copy; {{ "now"|date("Y") }} {{ site_name }}, All rights reserved.
+            &copy; {{ "now"|date("Y") }} {{ site_name }}, Tous droits réservés.
           </div>
       {% endif %}
+        <div class="mentions-legales">
+          <a href="/onadetbeaute/mentions-legales">Mentions légales</a>
+        </div>
+        <div class="developpeur">
+          Par <a href="mailto:mat.bonhommeau85@gmail.com">Mathieu Bonhommeau</a>
+        </div>
       {% if all_icons_show %}
         <div class="footer-social-icons">
           {% include directory ~ '/templates/social-icons.html.twig' %}

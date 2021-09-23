@@ -6,20 +6,56 @@ jQuery(document).ready(function() {
     slidesToShow: 4,
     responsive: [
         {
-        breakpoint: 768,
+        breakpoint: 1366,
         settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: '40px',
             slidesToShow: 3
         }
         },
         {
+        breakpoint: 1200,
+        settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '100px',
+            slidesToShow: 2
+        }
+        },
+        {
+        breakpoint: 992,
+        settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '100px',
+            slidesToShow: 1
+        }
+        },
+        {
+        breakpoint: 768,
+        settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 1
+        }
+        },
+        {
+        breakpoint: 587,
+        settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '50px',
+            slidesToShow: 1
+        }
+        },
+        {
         breakpoint: 480,
         settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
-            centerPadding: '40px',
+            centerPadding: '10px',
             slidesToShow: 1
         }
         }
