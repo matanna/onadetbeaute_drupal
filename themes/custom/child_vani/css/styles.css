@@ -47,6 +47,12 @@ body {
         padding: 0 2em 0 2em;
     }
 }
+header {
+    margin-bottom: 2em;
+}
+.main-wrapper {
+    padding-top: 0;
+}
 header .container {
     width: 100%;
     padding: 0 0;
@@ -68,6 +74,13 @@ header .container {
     box-shadow: 0px 2px 2px #919296;
     width: 100%;
 }
+.header-cicle7,
+.header-cicle8,
+.header-cicle9,
+.header-cicle10 {
+    background: #a35e9c;
+    opacity: 60%;
+}
 #block-infoscontactfooter-4 {
     display: none;
 }
@@ -81,7 +94,15 @@ header .container {
 }
 .header-main-right .primary-menu-wrapper .region-primary-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+@media all and (max-width: 1500px) {
+    .header-main-right .primary-menu-wrapper .region-primary-menu {
+        justify-content: space-between;
+    }
+    ul.main-menu li {
+      margin-right: 0 !important;
+    }
 }
 .header-main-right .primary-menu-wrapper .region-primary-menu .field--name-field-logo-email {
     display: none;
@@ -138,6 +159,7 @@ li {
 #block-child-vani-page-title h1 span {
     font-size: 1.5em;
     color: var(--theme-color);
+    overflow-wrap: break-word;
 }
 #block-child-vani-page-title h1 {
     color: var(--theme-color);
@@ -192,7 +214,7 @@ ul.main-menu li > a {
         text-align: center;
     }
     .header-main .site-logo img{
-      width: 60%;
+      width: 80%;
       margin-top: 0.5em !important;
     }
 }
@@ -213,6 +235,10 @@ ul.main-menu li > a {
 section.slider .slider-image {
     animation: 1s ease-out 0s 1 slideImageFromRight;
     flex-basis: 50%;
+    flex-grow: 10;
+}
+section.slider .slider-text {
+    flex-grow: 1;
 }
 section.slider .container {
     height: 70vh;
@@ -247,6 +273,9 @@ section.slider .slider-image img{
     .slider-text {
         max-height: 200px;
     }
+    .slider-text a {
+        margin-bottom: 2em;
+    }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
     section.slider .slider-image {
@@ -267,6 +296,9 @@ section.slider .slider-image img{
     .slider {
       height: 80vh;
       margin-top: 0;
+    }
+    .slider-text {
+        flex-basis: 30%;
     }
     #block-infoscontactfooter-4 {
         display: inherit;
@@ -404,6 +436,9 @@ Front page styles
 
 /*Bloc présentation de l'activité
 --------------------------------------------------------------*/
+#block-presentationdemonactivite .field--name-block-title {
+    display: none;
+}
 .presentation-activity {
     padding-top: 4vh;
     padding-bottom: 3vh;
@@ -590,6 +625,9 @@ Front page styles
 
 /*Bloc Qui suis-je
 --------------------------------------------------------------*/
+#block-child-vani-quisuisje .field--name-block-title {
+    display: none;
+}
 .qui-suis-je {
     background: #f2f4ff;
     padding-top: 4vh;
@@ -915,7 +953,6 @@ Global pages styles
 .item-photos .views-col .node-title {
     font-size: 1.5em;
     margin-bottom: 1em;
-    margin-top: 1em;
 }
 @keyframes scalePhotoFrom0 {
     0% {
@@ -928,7 +965,8 @@ Global pages styles
 .item-photos .views-col article .node-content img {
     box-shadow: 0px 0px 10px #919296;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     animation: 1s ease 0s 1 scalePhotoFrom0;
@@ -936,46 +974,98 @@ Global pages styles
 .item-photos .feed-icon {
     display: none;
 }
+@media screen and (max-width: 479px) {
+    .item-photos .views-col {
+        height: 250px
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .item-photos .views-col {
+            height: 400px
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .item-photos .views-col {
+        height: 450px
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .item-photos .views-col {
+        height: 500px
+    }
+}
+@media screen and (max-width: 1199px) {
+  .item-photos .views-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-photos {
+    width: 100% !important;
+    padding: 1em !important;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+  .item-photos .views-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item-photos .views-col {
+    height: 350px;
+  }
+
+  .column-photos {
+    width: 46% !important;
+    box-sizing: content-box;
+    padding: 2% !important;
+    margin-bottom: 1em;
+  }
+}
 
 /*Bloc Menu photos
 ---------------------------------------------------------------------------*/
-#superfish-menu-photos {
-  margin-bottom: 2em;
+.menu-wrap {
+    z-index: 1000;
 }
-#superfish-menu-photos li {
+#menu-photos {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+#superfish-menu-photos li,
+#superfish-menu-photos-toggle,
+#superfish-menu-photos-accordion li {
     background: #f2f4ff;
     margin-right: 1em;
 }
-#superfish-menu-photos li a {
+#superfish-menu-photos li a,
+#superfish-menu-photos-toggle span,
+#superfish-menu-photos-toggle,
+#superfish-menu-photos-accordion li a {
     color: var(--theme-color);
 }
-#superfish-menu-photos li a:hover {
+#superfish-menu-photos li a:hover,
+#superfish-menu-photos-toggle li a:hover {
     background: var(--theme-color);
     color: white;
     font-weight: bold;
 }
-#superfish-menu-photos li a:focus {
+#superfish-menu-photos li a:focus,
+#superfish-menu-photos-toggle li a:focus,
+#superfish-menu-photos-toggle:active,
+#superfish-menu-photos-accordion li a:focus {
     background: #F8BCBC;
 }
 
-#superfish-menu-photos-toggle li a:hover {
-    
+ul.sf-menu.sf-style-default a:hover {
+    background: #F8BCBC;
 }
 
 /*Mentions légales
 ----------------------------------------------------------------------------*/
 .title-mentions {
     font-size: 1.5em !important;
-}
-ul.sf-menu.sf-style-default li:hover,
-ul.sf-menu.sf-style-default li.sfHover,
-ul.sf-menu.sf-style-default a:focus,
-ul.sf-menu.sf-style-default a:hover,
-ul.sf-menu.sf-style-default span.nolink:hover {
-    
-}
-ul.sf-menu.sf-style-default a,
-ul.sf-menu.sf-style-default a:visited,
-ul.sf-menu.sf-style-default span.nolink {
-    color: var(--theme-color);
 }

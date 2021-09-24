@@ -14,7 +14,7 @@
     {% for post in posts.data|slice(0, 10) %}
         {% set id = (post.id|split('_'))[1] %}
         <div class="posts-iframe">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FONadetBeaute%2Fposts%2F{{ id }}&show_text=true&width=500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FONadetBeaute%2Fposts%2F{{ id }}&show_text=true" scrolling="yes" frameborder="0" allowfullscreen="true"></iframe>
         </div>
     {% endfor %}
     </div>
@@ -22,4 +22,5 @@
         {% include directory ~ '/templates/social-icons.html.twig' %}
     </div>
 </section>
+
 

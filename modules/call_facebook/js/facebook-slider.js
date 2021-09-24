@@ -1,5 +1,4 @@
 jQuery(document).ready(function() {
-    console.log('ok');
     jQuery('.bloc-iframes').slick({
     centerMode: true,
     centerPadding: '60px',
