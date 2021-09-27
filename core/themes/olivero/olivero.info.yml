@@ -16,7 +16,7 @@ base theme: false
 description: 'A clean, accessible, and flexible Drupal front-end theme.'
 alt text: 'Screenshot of Olivero, Drupal front-end theme.'
 package: Core
-# version: VERSION
+version: VERSION
 experimental: true
 libraries:
   - olivero/global-styling
@@ -83,8 +83,3 @@ ckeditor_stylesheets:
   - css/components/table.css
   - css/components/text-content.css
   - css/theme/ckeditor-frame.css
-
-# Information added by Drupal.org packaging script on 2021-09-01
-version: '9.2.5'
-project: 'drupal'
-datestamp: 1630534789

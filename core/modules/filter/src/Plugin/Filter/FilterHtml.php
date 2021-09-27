@@ -133,7 +133,6 @@ class FilterHtml extends FilterBase {
       // Find all matching elements that have any attributes and filter the
       // attributes by name and value.
       foreach ($xpath->query('//' . $allowed_tag . '[@*]') as $element) {
-        
         $this->filterElementAttributes($element, $allowed_attributes);
       }
     }
@@ -260,14 +259,13 @@ class FilterHtml extends FilterBase {
     $star_protector = '__zqh6vxfbk3cg__';
     $html = str_replace('*', $star_protector, $html);
     $body_child_nodes = Html::load($html)->getElementsByTagName('body')->item(0)->childNodes;
-   
+
     foreach ($body_child_nodes as $node) {
       if ($node->nodeType !== XML_ELEMENT_NODE) {
         // Skip the empty text nodes inside tags.
         continue;
       }
       $tag = $node->tagName;
-
       if ($node->hasAttributes()) {
         // Mark the tag as allowed, assigning TRUE for each attribute name if
         // all values are allowed, or an array of specific allowed values.
