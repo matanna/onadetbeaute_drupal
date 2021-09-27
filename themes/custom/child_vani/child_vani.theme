@@ -26,10 +26,28 @@ function child_vani_theme_suggestions_field_alter(&$suggestions, $variables, $ho
  */
 function child_vani_theme_suggestions_node_alter(&$suggestions, $variables, $hook) {
 
-    
-    if ($variables['elements']['#view_mode'] === 'slick_caroussel' 
+    if ($variables['elements']['#view_mode'] === 'slick_carousel' 
         && $variables['elements']['field_slider']['#title'] === 'Photo') {
-            $suggestions[] = 'node__presentation--slider';
+            $suggestions[] = 'node__presentation__slider';
+            
     }
     return $suggestions;
+}
+
+/**
+ * Add placeholder in input name and email when the user is not loggin - Anonymous user
+ *
+ * @param array $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param string $form_id
+ * @return void
+ */
+function child_vani_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    if ($form_id ==='contact_message_formulaire_de_contact_footer_form') {
+        $form['name']['#attributes']['placeholder'] = 'Votre nom ...';
+    }
+    if ($form_id ==='contact_message_formulaire_de_contact_footer_form') {
+        $form['mail']['#attributes']['placeholder'] = 'Votre email ...';
+    }
 }

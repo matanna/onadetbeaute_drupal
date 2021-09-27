@@ -8,8 +8,10 @@
  *
  */
 #}
+
 {% include directory ~ '/templates/header.html.twig' %}
 {% include '@vani/template-parts/highlighted.html.twig' %}
+
 <section class="presentation-activity">
   <div class="container">
     <div class="presentation-text">
@@ -17,30 +19,30 @@
     </div>
     <div class="presentation-slider-photos">
       {{ page.slider_photos }}
+      {% if logged_in %}
+      <div class="text-center"><a href="{{ path('view.photos_prevus_pour_le_slider.page_1') }}">Gérer les photos du slider</a></div>
+      {% endif %}
     </div>
   </div>
 </section>
+<div class="container">
+  <div class="presentation-link-photos node-readmore"><a href="{{ path('view.toutes_les_photos.page_1') }}">Toutes les photos</a></div>
+</div>
 <div id="main-wrapper" class="main-wrapper">
-  {% include '@vani/template-parts/content_home.html.twig' %}
-  <div class="container clear">
-    {% if front_sidebar %}
-      <div class="main-container">
-    {% endif %}
-    <main id="main" class="page-content home-content clear">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      {% include '@vani/template-parts/content_top.html.twig' %}
+  <div class="clear">
       {{ page.content }}
-      {# {% include '@vani/template-parts/content_home.html.twig' %} #}
-      {% include '@vani/template-parts/content_bottom.html.twig' %}
-    </main>
-    {% if front_sidebar %}
-      {% include '@vani/template-parts/sidebar_left.html.twig' %}
-      {% include '@vani/template-parts/sidebar_right.html.twig' %}
-      </div> {# /.main-container #}
-    {% endif %}
+      {% include '/modules/call_facebook/templates/facebook_posts.html.twig' with {'posts': posts } %}
   </div> {# /.container #}
 </div>{# /main-wrapper #}
-{% include '@vani/template-parts/footer.html.twig' %}
+
+
+<section class="qui-suis-je">
+
+  <div class="container">
+    {{ page.qui_suis_je}}
+  </div>
+</section>
+{% include directory ~ '/templates/footer.html.twig' %}
 {% if slider_show %}
   {{ attach_library('vani/slider') }}
 {% endif %}

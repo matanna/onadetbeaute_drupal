@@ -21,7 +21,10 @@
         "drupal/core-recommended": "^9.2",
         "drupal/core-vendor-hardening": "^9.2",
         "drupal/devel": "^4.1",
-        "kint-php/kint": "^3.3"
+        "drupal/superfish": "^1.4",
+        "drush/drush": "^10.6",
+        "kint-php/kint": "^3.3",
+        "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
         "drupal/drupal": "*"

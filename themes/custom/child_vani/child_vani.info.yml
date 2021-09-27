@@ -11,11 +11,13 @@ regions:
   search_box: 'Full Page Search'
   page_header: 'Page Header'
   highlighted: Highlighted
+  menu_photos: Menu Photos
   presentation: Presentation
   slider_photos: Slider Photos
   content: Content
   content_top: 'Content Top'
   content_bottom: 'Content Bottom'
+  qui_suis_je: Qui suis-je
   content_home: 'Homepage Content'
   sidebar_first: 'Sidebar Left'
   sidebar_second: 'Sidebar Right'
