@@ -1,0 +1,14 @@
+env_variables.viewenv:
+  path: '/admin/config/env/list'
+  defaults:
+    _controller: 'Drupal\env_variables\Controller\ViewEnvironmentVariablesController::view_env_variables'
+    _title: 'Environment Variables List'
+  requirements:
+    _permission: 'View env_variables'
+env_variables.config.form:
+  path: '/admin/config/env/settings'
+  defaults:
+    _form: '\Drupal\env_variables\Form\EnvironmentVariablesSettingsForm'
+    _title: 'Environment Variables'
+  requirements:
+    _permission: 'Edit Environment Variables'

@@ -1,0 +1,14 @@
+env_variables.config.link.form:
+  title: 'Environment Settings'
+  parent: system.admin_config
+  route_name: env_variables.config.form
+env_variables.config.link.default:
+  title: 'Settings'
+  parent: env_variables.config.link.form
+  route_name: env_variables.config.form
+  weight: 1
+env_variables.config.link.viewenv:
+  title: 'List'
+  parent: env_variables.config.link.form
+  route_name: env_variables.viewenv
+  weight: 2
