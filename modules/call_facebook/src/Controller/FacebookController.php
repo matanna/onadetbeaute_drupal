@@ -170,7 +170,7 @@ class FacebookController extends ControllerBase
             
             //Only posts contains '#onadetbeaute'in their message and has a picture are displayed on the website
             if (isset(json_decode($response->getBody(), true)['picture']) 
-                //&& str_contains(json_decode($response->getBody(), true)['message'], '#onadetbeaute.com')
+                && str_contains(json_decode($response->getBody(), true)['message'], '#onadetbeaute.com')
             ) {
                 $postsSorted['data'][] = $post; 
             }
